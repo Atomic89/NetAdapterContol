@@ -159,6 +159,8 @@ namespace NetAdapterController
 
         #endregion
 
+        #region ManagerCollection
+
         public static ManagementObjectCollection WMIQuery(string strwQuery)
         {
             ObjectQuery oQuery = new ObjectQuery(strwQuery);
@@ -167,7 +169,11 @@ namespace NetAdapterController
             return oReturnCollection;
         }
 
-        public static void EnableDisabledConnection (int deviceID,bool enableDisableConnection)
+        #endregion
+
+        #region ManagerConnection
+
+        public static void EnableDisabledConnection (int deviceID, bool enableDisableConnection)
         {
             ManagementObject currentMObject = new ManagementObject();
             string strWQuery = "SELECT DeviceID,ProductName,Description,NetEnabled "
@@ -193,5 +199,6 @@ namespace NetAdapterController
                 currentMObject.InvokeMethod("Disable", null);
             }
         }
+        #endregion
     }
 }

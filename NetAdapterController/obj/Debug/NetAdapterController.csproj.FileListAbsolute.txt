@@ -8,3 +8,13 @@ C:\Users\Сергей\source\repos\NetAdapterController\NetAdapterController\bin
 C:\Users\Сергей\source\repos\NetAdapterController\NetAdapterController\bin\Debug\NetAdapterController.pdb
 C:\Users\Сергей\source\repos\NetAdapterController\NetAdapterController\obj\Debug\NetAdapterController.exe
 C:\Users\Сергей\source\repos\NetAdapterController\NetAdapterController\obj\Debug\NetAdapterController.pdb
+C:\Users\Сергей\source\repos\test\NetAdapterController\bin\Debug\NetAdapterController.exe.config
+C:\Users\Сергей\source\repos\test\NetAdapterController\bin\Debug\NetAdapterController.exe
+C:\Users\Сергей\source\repos\test\NetAdapterController\bin\Debug\NetAdapterController.pdb
+C:\Users\Сергей\source\repos\test\NetAdapterController\obj\Debug\NetAdapterController.csprojAssemblyReference.cache
+C:\Users\Сергей\source\repos\test\NetAdapterController\obj\Debug\NetAdapterController.Form1.resources
+C:\Users\Сергей\source\repos\test\NetAdapterController\obj\Debug\NetAdapterController.Properties.Resources.resources
+C:\Users\Сергей\source\repos\test\NetAdapterController\obj\Debug\NetAdapterController.csproj.GenerateResource.cache
+C:\Users\Сергей\source\repos\test\NetAdapterController\obj\Debug\NetAdapterController.csproj.CoreCompileInputs.cache
+C:\Users\Сергей\source\repos\test\NetAdapterController\obj\Debug\NetAdapterController.exe
+C:\Users\Сергей\source\repos\test\NetAdapterController\obj\Debug\NetAdapterController.pdb

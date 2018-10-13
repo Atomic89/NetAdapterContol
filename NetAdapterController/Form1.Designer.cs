@@ -28,89 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.adaptersListTextBox = new System.Windows.Forms.RichTextBox();
+            this.searchAdapters = new System.Windows.Forms.Button();
+            this.IdDeviceTextBox = new System.Windows.Forms.TextBox();
+            this.IdDevice = new System.Windows.Forms.Label();
+            this.EnableButton = new System.Windows.Forms.Button();
+            this.DisableButton = new System.Windows.Forms.Button();
+            this.ConnectionStatus = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // adaptersListTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 12);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(313, 313);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.adaptersListTextBox.Location = new System.Drawing.Point(12, 12);
+            this.adaptersListTextBox.Name = "adaptersListTextBox";
+            this.adaptersListTextBox.Size = new System.Drawing.Size(313, 313);
+            this.adaptersListTextBox.TabIndex = 0;
+            this.adaptersListTextBox.Text = "";
             // 
-            // button1
+            // searchAdapters
             // 
-            this.button1.Location = new System.Drawing.Point(106, 331);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Найти адаптеры";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.searchAdapters.Location = new System.Drawing.Point(106, 331);
+            this.searchAdapters.Name = "searchAdapters";
+            this.searchAdapters.Size = new System.Drawing.Size(111, 23);
+            this.searchAdapters.TabIndex = 1;
+            this.searchAdapters.Text = "Найти адаптеры";
+            this.searchAdapters.UseVisualStyleBackColor = true;
+            this.searchAdapters.Click += new System.EventHandler(this.searchAdapters_Click);
             // 
-            // textBox1
+            // IdDeviceTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(377, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(43, 20);
-            this.textBox1.TabIndex = 2;
+            this.IdDeviceTextBox.Location = new System.Drawing.Point(377, 41);
+            this.IdDeviceTextBox.Name = "IdDeviceTextBox";
+            this.IdDeviceTextBox.Size = new System.Drawing.Size(43, 20);
+            this.IdDeviceTextBox.TabIndex = 2;
             // 
-            // label1
+            // IdDevice
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(331, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Id устройства для операции";
+            this.IdDevice.AutoSize = true;
+            this.IdDevice.Location = new System.Drawing.Point(331, 15);
+            this.IdDevice.Name = "IdDevice";
+            this.IdDevice.Size = new System.Drawing.Size(148, 13);
+            this.IdDevice.TabIndex = 3;
+            this.IdDevice.Text = "Id устройства для операции";
             // 
-            // button2
+            // EnableButton
             // 
-            this.button2.Location = new System.Drawing.Point(331, 78);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 20);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Включить";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.EnableButton.Location = new System.Drawing.Point(331, 78);
+            this.EnableButton.Name = "EnableButton";
+            this.EnableButton.Size = new System.Drawing.Size(75, 20);
+            this.EnableButton.TabIndex = 4;
+            this.EnableButton.Text = "Включить";
+            this.EnableButton.UseVisualStyleBackColor = true;
+            this.EnableButton.Click += new System.EventHandler(this.EnableButton_Click);
             // 
-            // button3
+            // DisableButton
             // 
-            this.button3.Location = new System.Drawing.Point(412, 78);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(73, 20);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Выключить";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.DisableButton.Location = new System.Drawing.Point(412, 78);
+            this.DisableButton.Name = "DisableButton";
+            this.DisableButton.Size = new System.Drawing.Size(73, 20);
+            this.DisableButton.TabIndex = 5;
+            this.DisableButton.Text = "Выключить";
+            this.DisableButton.UseVisualStyleBackColor = true;
+            this.DisableButton.Click += new System.EventHandler(this.DisableButton_Click);
             // 
-            // label2
+            // ConnectionStatus
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(393, 118);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
-            this.label2.TabIndex = 6;
+            this.ConnectionStatus.AutoSize = true;
+            this.ConnectionStatus.Location = new System.Drawing.Point(393, 118);
+            this.ConnectionStatus.Name = "ConnectionStatus";
+            this.ConnectionStatus.Size = new System.Drawing.Size(0, 13);
+            this.ConnectionStatus.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 403);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.ConnectionStatus);
+            this.Controls.Add(this.DisableButton);
+            this.Controls.Add(this.EnableButton);
+            this.Controls.Add(this.IdDevice);
+            this.Controls.Add(this.IdDeviceTextBox);
+            this.Controls.Add(this.searchAdapters);
+            this.Controls.Add(this.adaptersListTextBox);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -120,13 +120,13 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox adaptersListTextBox;
+        private System.Windows.Forms.Button searchAdapters;
+        private System.Windows.Forms.TextBox IdDeviceTextBox;
+        private System.Windows.Forms.Label IdDevice;
+        private System.Windows.Forms.Button EnableButton;
+        private System.Windows.Forms.Button DisableButton;
+        private System.Windows.Forms.Label ConnectionStatus;
     }
 }
 

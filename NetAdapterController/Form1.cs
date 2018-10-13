@@ -12,43 +12,43 @@ namespace NetAdapterController
         public Form1()
         {
             InitializeComponent();
-            label2.Text = "Устройство включено!";
-            button2.Enabled = false; 
-            button3.Enabled = false;
+            ConnectionStatus.Text = "Устройство включено!";
+            EnableButton.Enabled = false; 
+            DisableButton.Enabled = false;
         }
         
-        private void button1_Click(object sender, EventArgs e)
+        private void searchAdapters_Click(object sender, EventArgs e)
         {
             List<NetworkAdapter> netList = NetworkAdapter.GetAllNetworkAdapter();
-            richTextBox1.Text = "";
+            adaptersListTextBox.Text = "";
             foreach (NetworkAdapter netAdapter in netList)
             {
-                richTextBox1.Text +="Имя подключения:" + netAdapter.Name + Environment.NewLine;
-                richTextBox1.Text +="Статус подключения:" + NetworkAdapter.SaNetConnectionStatus[netAdapter.NetConnectionStatus] + Environment.NewLine;
-                richTextBox1.Text += "Id устройства:" + netAdapter.DeviceId;
+                adaptersListTextBox.Text += "Имя подключения:" + netAdapter.Name + Environment.NewLine;
+                adaptersListTextBox.Text += "Статус подключения:" + NetworkAdapter.SaNetConnectionStatus[netAdapter.NetConnectionStatus] + Environment.NewLine;
+                adaptersListTextBox.Text += "Id устройства:" + netAdapter.DeviceId + Environment.NewLine;
             }
 
-            button2.Enabled = true;
-            button3.Enabled = true;
+            EnableButton.Enabled = true;
+            DisableButton.Enabled = true;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void EnableButton_Click(object sender, EventArgs e)
         {
-            if (label2.Text != "Устройство включено!" && textBox1.Text != "")
+            if (ConnectionStatus.Text != "Устройство включено!" && IdDeviceTextBox.Text != "")
             {
-                label2.Text = "";
-                NetworkAdapter.EnableDisabledConnection(Convert.ToInt32(textBox1.Text), true);
-                label2.Text = "Устройство включено!";
+                ConnectionStatus.Text = "";
+                NetworkAdapter.EnableDisabledConnection(Convert.ToInt32(IdDeviceTextBox.Text), true);
+                ConnectionStatus.Text = "Устройство включено!";
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void DisableButton_Click(object sender, EventArgs e)
         {
-            if (label2.Text != "Устройство выключено!" && textBox1.Text != "")
+            if (ConnectionStatus.Text != "Устройство выключено!" && IdDeviceTextBox.Text != "")
             {
-                label2.Text = "";
-                NetworkAdapter.EnableDisabledConnection(Convert.ToInt32(textBox1.Text), false);
-                label2.Text = "Устройство выключено!";
+                ConnectionStatus.Text = "";
+                NetworkAdapter.EnableDisabledConnection(Convert.ToInt32(IdDeviceTextBox.Text), false);
+                ConnectionStatus.Text = "Устройство выключено!";
             }
         }
     }
