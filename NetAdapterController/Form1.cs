@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using System.Management;
-using System.Threading;
 
 namespace NetAdapterController
 {
@@ -12,7 +10,6 @@ namespace NetAdapterController
         public Form1()
         {
             InitializeComponent();
-            ConnectionStatus.Text = "Устройство включено!";
             EnableButton.Enabled = false; 
             DisableButton.Enabled = false;
         }
