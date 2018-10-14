@@ -176,9 +176,7 @@ namespace NetAdapterController
             string strWQuery = "SELECT DeviceID,ProductName,Description,NetEnabled "
                 + "FROM Win32_NetworkAdapter "
                 + "WHERE DeviceID = " + deviceID.ToString();
-            ObjectQuery oQuery = new ObjectQuery(strWQuery);
-            ManagementObjectSearcher oSearcher = new ManagementObjectSearcher(oQuery);
-            ManagementObjectCollection oReturnCollection = oSearcher.Get();
+            ManagementObjectCollection oReturnCollection = WMIQuery(strWQuery);
 
 
             foreach (ManagementObject mo in oReturnCollection)
