@@ -6,14 +6,14 @@ namespace NetAdapterController
 {
     public partial class Form1 : Form
     {
-        
+
         public Form1()
         {
             InitializeComponent();
-            EnableButton.Enabled = false; 
+            EnableButton.Enabled = false;
             DisableButton.Enabled = false;
         }
-        
+
         private void searchAdapters_Click(object sender, EventArgs e)
         {
             List<NetworkAdapter> netList = NetworkAdapter.GetAllNetworkAdapter();
@@ -31,22 +31,55 @@ namespace NetAdapterController
 
         private void EnableButton_Click(object sender, EventArgs e)
         {
-            if (ConnectionStatus.Text != "Устройство включено!" && IdDeviceTextBox.Text != "")
+            try
             {
-                ConnectionStatus.Text = "";
-                NetworkAdapter.EnableDisabledConnection(Convert.ToInt32(IdDeviceTextBox.Text), true);
-                ConnectionStatus.Text = "Устройство включено!";
+                if (IdDeviceTextBox.Text != "")
+                {
+                    ConnectionStatus.Text = "";
+                    bool connectStatus = NetworkAdapter.EnableDisabledConnection(Convert.ToInt32(IdDeviceTextBox.Text), true);
+
+                    if (connectStatus)
+                    {
+                        ConnectionStatus.Text = "Устройство включено!";
+                    }
+                    else
+                    {
+                        ConnectionStatus.Text = "Такого устройства нет!";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка:" + ex.Message);
             }
         }
 
+
         private void DisableButton_Click(object sender, EventArgs e)
         {
-            if (ConnectionStatus.Text != "Устройство выключено!" && IdDeviceTextBox.Text != "")
+            try
             {
-                ConnectionStatus.Text = "";
-                NetworkAdapter.EnableDisabledConnection(Convert.ToInt32(IdDeviceTextBox.Text), false);
-                ConnectionStatus.Text = "Устройство выключено!";
+                if (IdDeviceTextBox.Text != "")
+                {
+                    ConnectionStatus.Text = "";
+                    bool connectStatus = NetworkAdapter.EnableDisabledConnection(Convert.ToInt32(IdDeviceTextBox.Text), false);
+
+                    if (connectStatus)
+                    {
+                        ConnectionStatus.Text = "Устройство выключено!";
+                    }
+                    else
+                    {
+                        ConnectionStatus.Text = "Такого устройства нет!";
+                    }
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка:" + ex.Message);
+            }
+
         }
     }
 }
+

@@ -170,7 +170,7 @@ namespace NetAdapterController
 
         #region ManagerConnection
 
-        public static void EnableDisabledConnection (int deviceID, bool enableDisableConnection)
+        public static bool EnableDisabledConnection (int deviceID, bool enableDisableConnection)
         {
             ManagementObject currentMObject = new ManagementObject();
             string strWQuery = "SELECT DeviceID,ProductName,Description,NetEnabled "
@@ -185,13 +185,22 @@ namespace NetAdapterController
             }
 
             //Enable the Network Adapter 
-            if (enableDisableConnection)
+            try
             {
-                currentMObject.InvokeMethod("Enable", null);
+                if (enableDisableConnection)
+                {
+                    currentMObject.InvokeMethod("Enable", null);
+                    return true;
+                }
+                else
+                {
+                    currentMObject.InvokeMethod("Disable", null);
+                    return true;
+                }
             }
-            else
+            catch(Exception ex)
             {
-                currentMObject.InvokeMethod("Disable", null);
+                return false;
             }
         }
         #endregion

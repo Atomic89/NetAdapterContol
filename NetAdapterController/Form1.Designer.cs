@@ -94,7 +94,7 @@
             // ConnectionStatus
             // 
             this.ConnectionStatus.AutoSize = true;
-            this.ConnectionStatus.Location = new System.Drawing.Point(393, 118);
+            this.ConnectionStatus.Location = new System.Drawing.Point(337, 118);
             this.ConnectionStatus.Name = "ConnectionStatus";
             this.ConnectionStatus.Size = new System.Drawing.Size(0, 13);
             this.ConnectionStatus.TabIndex = 6;
@@ -103,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 403);
+            this.ClientSize = new System.Drawing.Size(504, 358);
             this.Controls.Add(this.ConnectionStatus);
             this.Controls.Add(this.DisableButton);
             this.Controls.Add(this.EnableButton);
