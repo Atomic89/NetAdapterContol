@@ -77,6 +77,7 @@ namespace NetAdapterController
             catch (Exception ex)
             {
                 MessageBox.Show("Ошибка:" + ex.Message);
+
             }
 
         }
